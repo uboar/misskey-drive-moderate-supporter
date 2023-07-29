@@ -8,5 +8,6 @@ export default defineConfig({
   server: {
     port: 6481,
     https: true,
-  }
+  },
+  base: "/misskey-drive-moderate-supporter/",
 });
