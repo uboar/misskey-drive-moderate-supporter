@@ -54,11 +54,11 @@
         <div class="flex flex-wrap gap-2 md:gap-8 my-4">
           <div>
             <label for="server-url">サーバーURL</label>
-            <input id="server-url" bind:value={$serverUrl} type="text" class="input input-xs md:input-md input-bordered w-96" placeholder="EX:voskey.icalo.net" on:input={updateCookie} />
+            <input id="server-url" bind:value={$serverUrl} type="text" class="input input-xs md:input-md input-bordered md:w-96" placeholder="EX:voskey.icalo.net" on:input={updateCookie} />
           </div>
           <div>
             <label for="access-token">アクセストークン</label>
-            <input id="access-token" bind:value={$accessToken} type="password" class="input input-xs md:input-md input-bordered w-96" on:input={updateCookie} />
+            <input id="access-token" bind:value={$accessToken} type="password" class="input input-xs md:input-md input-bordered md:w-96" on:input={updateCookie} />
           </div>
         </div>
         <div class="flex flex-wrap md:gap-8 gap-2">
