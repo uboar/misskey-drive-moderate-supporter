@@ -47,33 +47,33 @@
 <main>
     <div class="sticky z-20 top-0 border-b-2 w-full bg-slate-300">
       <div class="p-4">
-        <span class="font-bold text-3xl">Misskey Drive Moderate Supporter</span>
-        <span>
+        <span class="font-bold text-3xl hidden lg:block">Misskey Drive Moderate Supporter</span>
+        <span class="hidden lg:block">
           入力した情報はCookieに保存されます。
         </span>
-        <div class="flex gap-8 my-4">
+        <div class="flex flex-wrap gap-2 md:gap-8 my-4">
           <div>
             <label for="server-url">サーバーURL</label>
-            <input id="server-url" bind:value={$serverUrl} type="text" class="input input-bordered w-96" placeholder="EX:voskey.icalo.net" on:input={updateCookie} />
+            <input id="server-url" bind:value={$serverUrl} type="text" class="input input-xs md:input-md input-bordered w-96" placeholder="EX:voskey.icalo.net" on:input={updateCookie} />
           </div>
           <div>
             <label for="access-token">アクセストークン</label>
-            <input id="access-token" bind:value={$accessToken} type="password" class="input input-bordered w-96" on:input={updateCookie} />
+            <input id="access-token" bind:value={$accessToken} type="password" class="input input-xs md:input-md input-bordered w-96" on:input={updateCookie} />
           </div>
         </div>
-        <div class="flex gap-8">
+        <div class="flex flex-wrap md:gap-8 gap-2">
           <div>
             <label for="since-id">sinceId</label>
-            <input id="since-id" bind:value={sinceId} type="text" class="input input-bordered w-72" />
+            <input id="since-id" bind:value={sinceId} type="text" class="input input-xs md:input-md input-bordered w-72" />
           </div>
           <div>
             <label for="until-id">untilId</label>
-            <input id="until-id" bind:value={untilId} type="text" class="input input-bordered w-72" />
+            <input id="until-id" bind:value={untilId} type="text" class="input input-xs md:input-md input-bordered w-72" />
           </div>
-          <button class="btn btn-wide btn-primary" on:click={getFiles}>{(files.length > 0) ? "これより新しいファイルを取得" : "ファイルの取得"}</button>
+          <button class="btn btn-sm md:btn-md md:btn-wide btn-primary" on:click={getFiles}>{(files.length > 0) ? "これより新しいファイルを取得" : "ファイルの取得"}</button>
           {#if files.length > 0}
-            <button class="btn btn-outline btn-primary" on:click={() => {files = []; getFiles();}}>バッファを削除して再取得</button>
-            <label for="report-dialog" class="btn btn-secondary">報告用テンプレート文書作成</label>
+            <button class="btn btn-sm md:btn-md btn-outline btn-primary" on:click={() => {files = []; getFiles();}}>バッファを削除して再取得</button>
+            <label for="report-dialog" class="btn btn-sm md:btn-md btn-secondary">報告用テンプレート文書作成</label>
           {/if}
         </div>
       </div>
