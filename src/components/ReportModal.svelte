@@ -15,9 +15,9 @@
     }
     generatedText = `${new Date().toLocaleString()}\n`;
     generatedText += `${files.length}個のファイルをチェックしました。\n\n`;
-    generatedText += `チェックを開始したファイルのID ： ${files[0].id}\n`;
+    generatedText += `チェックを開始したファイルのID ： ${files[0].id} <https://${$serverUrl}/admin/file/${files[0].id}>\n`;
     generatedText += `チェックを開始したファイルの作成時刻 ： ${new Date(Date.parse(files[0].createdAt)).toLocaleString()}\n`;
-    generatedText += `チェックを終了したファイルのID ： ${files[files.length - 1].id}\n`;
+    generatedText += `チェックを終了したファイルのID ： ${files[files.length - 1].id}  <https://${$serverUrl}/admin/file/${files[files.length - 1].id}>\n`;
     generatedText += `チェックを終了したファイルの作成時刻 ： ${new Date(Date.parse(files[files.length - 1].createdAt)).toLocaleString()}\n\n`;
     
     files.forEach((elem) => {
@@ -26,8 +26,8 @@
 
     generatedText += `フラグを立てたファイルは${flagSum}個でした。\n`;
     generatedText += `続きをチェックする場合は \n`;
-    generatedText += `https://${$serverUrl}/admin/files \n`
-    generatedText += `または https://uboar.github.io/misskey-drive-moderate-supporter?sinceId=${files[files.length - 1].id} からチェック出来ます。`;
+    generatedText += `<https://${$serverUrl}/admin/files> \n`
+    generatedText += `または <https://uboar.github.io/misskey-drive-moderate-supporter?sinceId=${files[files.length - 1].id}> からチェック出来ます。`;
   }
 
   const genFlag = () => {
