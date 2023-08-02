@@ -23,8 +23,10 @@
         limit: 100,
       }
       if(files.length > 0) sinceId = files[files.length - 1].id;
-      if(sinceId !== "") requestBody["sinceId"] = sinceId;
-      if(untilId !== "") requestBody["untilId"] = untilId;
+      if(sinceId !== "") {
+        requestBody["sinceId"] = sinceId;
+        untilId = "";
+      }else if(untilId !== "") requestBody["untilId"] = untilId;
       
       const res = await fetch(`https://${$serverUrl}/api/admin/drive/files`, {
         method: "POST",
