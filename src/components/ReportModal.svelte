@@ -41,7 +41,7 @@
     
     generatedText += `${flagImages.length}個のフラグを立てたファイルがありました。以下が一覧です。\n\n`;
     flagImages.forEach((elem, index) => {
-      generatedText += `${index + 1} ： ${elem} \n`
+      generatedText += `${index + 1} ： <${elem}> \n`
     })
   }
 
