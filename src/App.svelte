@@ -80,7 +80,7 @@
     <div class="sticky z-20 top-0 border-b-2 w-full bg-slate-300">
       {#if !collapsed}
         <div class="md:p-4">
-          <span class="font-bold text-3xl hidden lg:block">Misskey Drive Moderate Supporter</span>
+          <span class="font-bold text-3xl hidden lg:block">Misskey Drive Moderate Supporter <span class="text-sm link"><a href="https://github.com/uboar/misskey-drive-moderate-supporter/blob/main/README.md" target="_blank">使い方</a></span></span>
           <span class="hidden lg:block">
             入力した情報はCookieに保存されます。
           </span>
